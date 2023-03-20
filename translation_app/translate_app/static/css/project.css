@@ -1,0 +1,23 @@
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+body {
+  margin: 0 auto;
+  font-family: Arial;
+  background-color: #98b4d4;
+  color: white;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.mainDiv {
+  padding: 20px;
+}

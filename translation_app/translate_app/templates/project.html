@@ -1,0 +1,45 @@
+{% load static %}
+<head>
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="{% static 'css/project.css' %}" />
+</head>
+<body>
+  {% if manager == True %}
+  <a href="{% url 'dashboard' %}">
+    <button
+    type="submit"
+    class="btn btn-primary"
+    style="
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 10px;
+      margin-right: 10;
+      margin-top: 10;
+    "
+  > Dashboard
+  </button></a>
+  {% endif %}
+
+  <h2 style="padding: 20px">Project Name: {{project.target_lang}}_{{project.wiki_title}}</h2>
+  <div class="mainDiv">
+    <form method='POST'>
+      {% csrf_token %}
+      {% for sentence in sentences %}
+      <div class="form-group row">
+        <label class="col-sm-6 col-form-label" for="translated_sentence_{{sentence.id}}"> {{forloop.counter}}.  {{sentence.original_sentence}}</label>
+        <div class="col-sm-6">
+          <textarea class="form-control" id="translated_sentence_{{sentence.id}}" name="{{sentence.id}}" rows=2>{{sentence.translated_sentence}}</textarea>
+        </div>
+      </div>
+      {% endfor %}
+      <center><button type="submit" class="btn btn-primary">Submit</button></center>
+    </form>
+  </div>
+</body>

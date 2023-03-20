@@ -1,0 +1,18 @@
+.form-container {
+  margin-inline: auto;
+  margin-top: 15%;
+  display: block;
+  width: 500px;
+  text-align: center;
+}
+
+body {
+  margin: 0 auto;
+  font-family: Arial;
+  background-color: #98b4d4;
+  color: white;
+}
+
+.form-container input {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,17 @@
+asgiref==3.6.0
+backports.zoneinfo==0.2.1
+beautifulsoup4==4.11.2
+certifi==2022.12.7
+charset-normalizer==3.1.0
+click==8.1.3
+Django==4.1.7
+idna==3.4
+joblib==1.2.0
+nltk==3.8.1
+regex==2022.10.31
+requests==2.28.2
+soupsieve==2.4
+sqlparse==0.4.3
+tqdm==4.65.0
+urllib3==1.26.15
+Wikipedia-API==0.5.8
